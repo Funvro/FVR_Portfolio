@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FVR Visuals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#home"><span class="brand-mark">FVR</span> VISUALS</a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#works">WORKS</a>
+    <a href="#pfps">PFPS</a>
+    <a href="#software">SOFTWARE</a>
+    <a href="#reviews">REVIEWS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="availability">● AVAILABLE FOR WORK</div>
+    <h1>DESIGN THAT<br><em>GETS NOTICED.</em></h1>
+    <p>Professional thumbnails, PFPs and creative visuals for content creators.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#works">VIEW MY WORK</a>
+      <a class="btn ghost" href="#contact">CONTACT ME</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="works">
+  <div class="section-heading">
+    <div class="eyebrow">PORTFOLIO</div>
+    <h2>MY <span>WORKS</span></h2>
+    <p>Some of my latest thumbnail designs.</p>
+  </div>
+  <div class="work-grid">
+    <div class="work-card"><img src="assets/thumbnail-1.png" alt="Thumbnail 1"><span>THUMBNAIL DESIGN</span></div>
+    <div class="work-card"><img src="assets/thumbnail-2.png" alt="Thumbnail 2"><span>THUMBNAIL DESIGN</span></div>
+    <div class="work-card"><img src="assets/thumbnail-3.png" alt="Thumbnail 3"><span>THUMBNAIL DESIGN</span></div>
+    <div class="work-card"><img src="assets/thumbnail-4.png" alt="Thumbnail 4"><span>THUMBNAIL DESIGN</span></div>
+  </div>
+</section>
+
+<section class="section" id="pfps">
+  <div class="section-heading">
+    <div class="eyebrow">CREATIVE WORK</div>
+    <h2>PFP <span>DESIGNS</span></h2>
+    <p>Profile pictures made for creators and communities.</p>
+  </div>
+  <div class="pfp-grid">
+    <div class="pfp-card"><img src="assets/pfp-1.png" alt="PFP Design 1"><span>PFP DESIGN</span></div>
+    <div class="pfp-card"><img src="assets/pfp-2.png" alt="PFP Design 2"><span>PFP DESIGN</span></div>
+    <div class="pfp-card"><img src="assets/pfp-3.png" alt="PFP Design 3"><span>PFP DESIGN</span></div>
+    <div class="pfp-card"><img src="assets/pfp-4.png" alt="PFP Design 4"><span>PFP DESIGN</span></div>
+  </div>
+</section>
+
+<section class="section" id="software">
+  <div class="section-heading">
+    <div class="eyebrow">MY TOOLKIT</div>
+    <h2>SOFTWARE I <span>USE</span></h2>
+  </div>
+  <div class="software-grid">
+    <div class="tool"><div class="tool-icon">PS</div><h3>Photoshop</h3><p>Professional editing</p></div>
+    <div class="tool"><div class="tool-icon">P</div><h3>PicsArt</h3><p>Creative design</p></div>
+    <div class="tool"><div class="tool-icon">B</div><h3>Blockbench</h3><p>Minecraft 3D modelling</p></div>
+    <div class="tool"><div class="tool-icon">BL</div><h3>Blender</h3><p>3D rendering</p></div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="section-heading">
+    <div class="eyebrow">CLIENT FEEDBACK</div>
+    <h2>WHAT THEY <span>SAY</span></h2>
+  </div>
+  <div class="review-grid">
+    <div class="review"><div class="review-top"><div class="avatar green">FG</div><div><h3>Fgaming</h3><small>3K+ Subscribers</small></div></div><div class="review-stars">★★★★★</div><p>Really clean work. The thumbnail came out great!</p></div>
+    <div class="review"><div class="review-top"><div class="avatar purple">AE</div><div><h3>Aezox</h3><small>Content Creator</small></div></div><div class="review-stars">★★★★★</div><p>Great design and really nice attention to detail.</p></div>
+    <div class="review"><div class="review-top"><div class="avatar yellow">SG</div><div><h3>SG Gamer</h3><small>3.6K+ Subscribers</small></div></div><div class="review-stars">★★★★★</div><p>Professional work and exactly what I needed.</p></div>
+    <div class="review"><div class="review-top"><div class="avatar gold">500+</div><div><h3>Creator Client</h3><small>500+ Subscribers</small></div></div><div class="review-stars">★★★★★</div><p>Very good quality and fast delivery.</p></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-card">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <h2>LET'S <span>WORK</span></h2>
+    <p>Have a project in mind? Send me a message and I'll get back to you by email.</p>
+    <form class="contact-form" action="https://formspree.io/f/xnpavawl" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit">SEND MESSAGE →</button>
+      <div class="contact-status" id="contact-status"></div>
+    </form>
+  </div>
+</section>
+
+<footer><span>© 2026 FVR VISUALS</span><span>DESIGNED FOR CREATORS</span></footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" type="button">×</button>
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<script>
+const form=document.querySelector(".contact-form");
+const status=document.getElementById("contact-status");
+form.addEventListener("submit",async(e)=>{
+  e.preventDefault();
+  const b=form.querySelector("button");
+  b.disabled=true;b.textContent="SENDING...";
+  try{
+    const r=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+    if(r.ok){form.reset();status.textContent="Message sent successfully ✓";}
+    else status.textContent="Something went wrong. Please try again.";
+  }catch(err){status.textContent="Could not send the message. Please try again."}
+  b.disabled=false;b.textContent="SEND MESSAGE →";
+});
+
+const box=document.getElementById("lightbox");
+const preview=document.getElementById("lightbox-img");
+document.querySelectorAll(".work-card img,.pfp-card img").forEach(img=>{
+  img.addEventListener("click",()=>{
+    preview.src=img.src;preview.alt=img.alt;box.classList.add("open");
+  });
+});
+function closeBox(){box.classList.remove("open")}
+document.querySelector(".close").addEventListener("click",closeBox);
+box.addEventListener("click",e=>{if(e.target===box)closeBox()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBox()});
+</script>
+</body>
+</html>
